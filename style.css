@@ -134,7 +134,7 @@ h2{
     padding-bottom: 8rem; 
 }
 
-/*cards*/
+
 
 .cards {
     display: flex;
@@ -173,7 +173,7 @@ padding: 2rem 0 0 2rem;
     width: fit-content;
 }
 
-/*rodapé*/
+
 
 footer{
     border-bottom: 0;
@@ -208,7 +208,7 @@ label{
     width: 500px;
 }
 
-/*utilitários*/
+
 
 .mt-1{
     margin-top: 1rem;
@@ -245,7 +245,7 @@ label{
    height: 7.5rem;
 }
 
-/*Responsividade*/
+
 
 @media screen and (min-width: 40rem){
     header nav {
