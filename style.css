@@ -24,6 +24,11 @@ body {
   padding-left: 1.13rem;
 }
 
+.hero-section .ilustracao {
+  display: flex;
+  justify-content: flex-end;
+}
+
 header,
 .hero-section,
 .coursers-section,
@@ -75,12 +80,6 @@ header nav a:nth-child(2n-1) {
   padding-bottom: 16rem;
 }
 
-.hero-section img {
-  display: block;
-  margin: 1.25rem 0 0 auto;
-  max-width: 100%;
-}
-
 h1 {
   font-size: 3rem;
   line-height: 100%;
@@ -92,11 +91,6 @@ h2 {
 
 .hero-section p {
   font-size: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.hero-section.button {
-  position: relative;
 }
 
 .hero-section.button::after {
@@ -133,10 +127,8 @@ h2 {
   columns: 500px;
   align-items: start;
   gap: 1.25rem;
-  margin-top: -7rem;
-  margin-bottom: 2rem;
-  margin-left: 10px;
-  margin-right: 0.8rem;
+  padding: 20px 100px; 
+  margin: -7rem 0.8rem 2rem 10px;
 }
 
 .card {
