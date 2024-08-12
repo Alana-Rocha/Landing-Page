@@ -7,19 +7,19 @@
 
 :root {
   --color-primary: #f084c4;
-  --color-secundary: #95416f;
+  --color-secondary: #95416f;
   --color-black: #000;
   --color-white: #f8f8f8;
 }
 
 body {
   border-left: solid;
-  background-image: linear-gradient(rgb(235, 245, 255), rgb(225, 177, 225));
+  background: linear-gradient(rgb(235, 245, 255), rgb(225, 177, 225));
   padding: 0 1rem;
 }
 
 .logo {
-  margin: center;
+  margin: auto;
   height: 70px;
   padding-left: 1.13rem;
 }
@@ -29,12 +29,8 @@ body {
   justify-content: flex-end;
 }
 
-header,
-.hero-section,
-.coursers-section,
-footer {
-  border-color: var(--color-black);
-  border-style: solid;
+section {
+  border: 2px solid var(--color-black);
   border-width: 0 2px 2px 2px;
   padding: 1.25rem;
 }
@@ -56,7 +52,7 @@ nav a {
   text-decoration: none;
 }
 
-header nav a:nth-child(2n-1) {
+header nav a:nth-child(odd) {
   text-align: right;
 }
 
@@ -65,7 +61,6 @@ header nav a:nth-child(2n-1) {
   border: 2px solid var(--color-black);
   box-shadow: 4px 4px 0 var(--color-black);
   color: var(--color-black);
-  display: block;
   font-size: 1.25rem;
   padding: 0.3rem;
   max-width: 12rem;
@@ -73,16 +68,16 @@ header nav a:nth-child(2n-1) {
   text-decoration: none;
   text-transform: uppercase;
   width: 25rem;
+  display: block;
 }
 
 .hero-section {
-  padding-right: 0;
-  padding-bottom: 16rem;
+  padding: 0 0 16rem 0;
 }
 
 h1 {
   font-size: 3rem;
-  line-height: 100%;
+  line-height: 1;
 }
 
 h2 {
@@ -93,7 +88,7 @@ h2 {
   font-size: 1.25rem;
 }
 
-.hero-section.button::after {
+.hero-section .button::after {
   content: "";
   background: url(/arrow-curve.svg);
   position: absolute;
@@ -104,7 +99,6 @@ h2 {
 }
 
 .decoration {
-  display: block;
   position: relative;
 }
 
@@ -124,8 +118,7 @@ h2 {
 .cards {
   display: flex;
   flex-direction: column;
-  columns: 500px;
-  align-items: start;
+  align-items: flex-start;
   gap: 1.25rem;
   padding: 20px 100px; 
   margin: -7rem 0.8rem 2rem 10px;
@@ -135,13 +128,13 @@ h2 {
   background-color: var(--color-primary);
   border: 2px solid var(--color-black);
   box-shadow: 4px 4px 0 var(--color-black);
-  max-width: 400em;
+  max-width: 400px;
   padding: 2rem 0 0 2rem;
 }
 
-.card:nth-child(2n) {
-  align-self: end;
-  background-color: var(--color-secundary);
+.card:nth-child(even) {
+  align-self: flex-end;
+  background-color: var(--color-secondary);
 }
 
 .card strong {
@@ -156,21 +149,17 @@ h2 {
 }
 
 footer {
+  border: 2px solid var(--color-black);
   border-bottom: 0;
   padding: 1rem 1.25rem 3rem;
-  border-color: var(--color-black);
-  border-style: solid;
   line-height: 20px;
-  border: solid 2px;
 }
 
 footer nav a {
   display: block;
-  padding-left: 0;
 }
 
 form {
-  display: block;
   font-size: 1.2rem;
 }
 
@@ -178,35 +167,19 @@ input {
   border: 2px solid var(--color-black);
   box-shadow: 4px 4px 0 var(--color-black);
   font-size: 1.5rem;
-  padding: 0.2rem;
+  padding: 0.2rem 0 0.2rem 2.5rem;
   width: 18rem;
-  padding-left: 2.5rem;
 }
 
 label {
   width: 500px;
 }
 
-.mt-1 {
-  margin-top: 1rem;
-}
-
-.mt-2 {
-  margin-top: 2rem;
-}
-
-.mb-1 {
-  margin-bottom: 1rem;
-}
-
-.mb-2 {
-  margin-bottom: 2rem;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
 
 .text-primary {
   color: var(--color-primary);
@@ -222,7 +195,7 @@ label {
   height: 7.5rem;
 }
 
-@media screen and (min-width: 40rem) {
+@media (min-width: 40rem) {
   header nav {
     display: block;
     text-align: center;
@@ -233,12 +206,12 @@ label {
     margin-left: 1rem;
   }
 
-  .card:nth-child(2n) {
+  .card:nth-child(even) {
     margin-top: 3rem;
   }
 }
 
-@media screen and (min-width: 40rem) {
+@media (min-width: 40rem) {
   header div {
     display: flex;
     align-items: center;
@@ -252,7 +225,7 @@ label {
   }
 }
 
-@media screen and (min-width: 72rem) {
+@media (min-width: 72rem) {
   .container {
     display: flex;
     align-items: center;
@@ -292,7 +265,7 @@ label {
   }
 }
 
-@media screen and(min-width: 90rem) {
+@media (min-width: 90rem) {
   .container {
     max-width: 90rem;
   }
